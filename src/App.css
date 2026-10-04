@@ -1,0 +1,411 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fb;
+  color: #1f2937;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-links button {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.nav-links button:hover,
+.nav-links button.active {
+  background-color: #2563eb;
+}
+
+/* ================= MAIN ================= */
+
+.main-content {
+  width: 86%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 0;
+}
+
+h1 {
+  font-size: 32px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* ================= DASHBOARD ================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+  color: #6b7280;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.stat-card p {
+  color: #1e3a8a;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* ================= FORM ================= */
+
+.problem-form {
+  background-color: white;
+  max-width: 700px;
+  margin: 0 auto 35px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.problem-form h2 {
+  color: #111827;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  color: #374151;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background-color: white;
+  color: #111827;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.add-button {
+  display: block;
+  margin: 25px auto 0;
+  padding: 11px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #1d4ed8;
+}
+
+.form-error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+/* ================= PROBLEM LIST ================= */
+
+.problem-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.problem-card {
+  background-color: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.problem-card h2 {
+  color: #111827;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.problem-card p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.problem-card strong {
+  color: #374151;
+}
+
+.problem-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.difficulty,
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+/* ================= EMPTY / PROGRESS ================= */
+
+.empty-state,
+.progress-card {
+  background-color: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.empty-state h2,
+.progress-card h2 {
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.empty-state p,
+.progress-card p {
+  color: #6b7280;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .problem-form {
+    width: 100%;
+  }
+
+  .problem-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .problem-details {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-content {
+    width: 90%;
+    padding: 30px 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links button {
+    width: 100%;
+  }
+
+  .form-group {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .problem-form {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
+/* ================= PROBLEM ACTIONS ================= */
+
+.problem-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.problem-actions button {
+  border: none;
+  padding: 8px 13px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Mark Completed */
+.status-button {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.status-button:hover {
+  background-color: #dbeafe;
+}
+
+/* Edit */
+.edit-button {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.edit-button:hover {
+  background-color: #e5e7eb;
+}
+
+/* Delete */
+.delete-button {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background-color: #fee2e2;
+}
+/* ================= SEARCH & FILTER ================= */
+
+.filter-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.filter-container input,
+.filter-container select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background-color: white;
+  color: #111827;
+  font-size: 14px;
+  outline: none;
+}
+
+.filter-container input:focus,
+.filter-container select:focus {
+  border-color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .filter-container {
+    grid-template-columns: 1fr;
+  }
+}
